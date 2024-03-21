@@ -13,4 +13,3 @@ class CustomException(Exception):
             self.file_name,self.line_no,str(self.error_message)
         )
         
-       
