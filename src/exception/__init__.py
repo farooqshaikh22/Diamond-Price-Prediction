@@ -8,8 +8,9 @@ class CustomException(Exception):
         self.line_no = exc_tb.tb_lineno
         self.file_name = exc_tb.tb_frame.f_code.co_filename
         
-    def __str__(self) -> str:
-        return "Error occured in python script name [{0}] line number [{1}] error message [{error_message}]".format(
-            self.file_name,self.line_no,str(self.error_message)
-        )
+    def __str__(self):
+        return "Error occured in python script name [{0}] line number [{1}] error message [{2}]".format(
+        self.file_name, self.line_no, str(self.error_message))
+        
+
         

@@ -4,20 +4,12 @@ from src.exception import CustomException
 import sys,os
 
 
-app = Flask(__name__)
-
-@app.route('/', methods = ['GET', 'POST'])
-def index():
-
-    try:
-        raise Exception("we are testing our Exception file") # Error
-    except Exception as e:
-        ML = CustomException(e, sys)
-        logging.info(ML.error_message)
-        
-        logging.info("We are testing our logging file")
-
-        return "Welcome to Engineering Wala Bhiya"
 
 if __name__ == "__main__":
-    app.run(debug = True) # 5000
+    try:
+        a = 1/0
+    except Exception as e:
+        ml =  CustomException(e,sys)
+        logging.info(ml)
+    
+    
