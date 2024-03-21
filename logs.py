@@ -3,7 +3,7 @@ from src.logger import logging
 
 app = Flask(__name__)
 
-@app.route('/',methodS = ['GET','POST'])
+@app.route('/',methods = ['GET','POST'])
 def index():
     logging.info('testing logging file')
     return 'Hello World'
