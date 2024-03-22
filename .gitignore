@@ -3,3 +3,4 @@ src/logger/__pycache__
 diamond
 __pycache__
 Diamond_Price_Prediction.egg-info
+data/
