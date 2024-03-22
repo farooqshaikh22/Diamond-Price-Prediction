@@ -40,9 +40,10 @@ class DataIngestion:
             )
             
         except Exception as e:
-            raise CustomException(e,sys)
+            custom_exception =  CustomException(e,sys)
+            logging.info(custom_exception)
         
         
 if __name__ == "__main__":
     obj = DataIngestion()
-    train_data = obj.initiate_data_ingestion()
+    train_data,test_data = obj.initiate_data_ingestion()
