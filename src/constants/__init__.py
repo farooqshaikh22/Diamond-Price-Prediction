@@ -9,6 +9,8 @@ CURRENT_TIME_STAMP = current_time_stamp()
 ROOT_DIR_KEY = os.getcwd()
 DATA_DIR = 'data'
 DATA = 'gemstone.csv'
+
+
 ARTIFACT_DIR_KEY = 'Artifact'
 
 ## data ingestion related variables
@@ -18,3 +20,11 @@ INGESTED_DATA_DIR_KEY = 'ingested_data_dir'
 RAW_DATA = 'row.csv'
 TRAIN_DATA = 'train.csv'
 TEST_DATA = 'test.csv'
+
+## data transformation related variables
+DATA_TRANSFORMATION_ARTIFACT_KEY = 'data_transformation'
+DATA_PROCESSOR_DIR = 'processor'
+DATA_TRANSFORMED_PROCESSOR_OBJ = 'processor.pkl'
+DATA_TRANSFORMATION_DIR = 'transformation'
+TRANSFORMED_TRAIN_DATA = 'train.csv'
+TRANSFORMED_TEST_DATA = 'test.csv'
