@@ -11,6 +11,7 @@ from sklearn.preprocessing import OrdinalEncoder
 from sklearn.preprocessing import FunctionTransformer
 from sklearn.compose import ColumnTransformer
 from sklearn.pipeline import Pipeline
+from src.utils import save_object
 
 
 @dataclass
@@ -61,6 +62,7 @@ class DataTransformation:
 
                         
         except Exception as e:
+            logging.info('Exception occured in the get_data_transformation')
             raise CustomException(e,sys)
         
     def initiate_data_transformation(self,train_path,test_path):
@@ -95,13 +97,24 @@ class DataTransformation:
             
             os.makedirs(os.path.dirname(self.data_transformation_config.transform_train_data_path),
                         exist_ok=True)
-            df_train.to_csv(self.data_transformation_config.transform_train_data_path,index=False,header=True)
+            df_train.to_csv(self.data_transformation_config.transform_train_data_path,
+                            index=False,header=True)
             
             os.makedirs(os.path.dirname(self.data_transformation_config.transform_test_data_path),
                         exist_ok=True)
-            df_test.to_csv(self.data_transformation_config.transform_test_data_path,index=False,header=True)
+            df_test.to_csv(self.data_transformation_config.transform_test_data_path,
+                           index=False,header=True)
+            
+            save_object(file_path=self.data_transformation_config.processor_obj_file_path,
+                        obj=preprocessor_obj)
+            
+            logging.info('preprocessor pickle file saved')
+            
+            return(train_array,
+                   test_array)
             
         except Exception as e:
+            logging.info('Exception occured in the initiate_data_transformation')
             raise CustomException(e,sys)
         
         
