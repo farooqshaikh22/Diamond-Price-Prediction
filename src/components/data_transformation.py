@@ -20,6 +20,9 @@ class DataTransformationConfig:
     transform_train_data_path:str = TRANSFORMED_TRAIN_DATA_FILE_PATH
     transform_test_data_path:str = TRANSFORMED_TEST_DATA_FILE_PATH
     
+def remove_features(df):
+    return df.drop(columns=['x','y','z'],axis=1)
+    
 class DataTransformation:
     def __init__(self):
         self.data_transformation_config = DataTransformationConfig()
@@ -41,7 +44,7 @@ class DataTransformation:
             logging.info('Pipeline Initiated')
             ## Numerical pipeline
             num_pipeline = Pipeline(steps=[
-                ('remove_features',FunctionTransformer((lambda x:x.drop(columns=['x','y','z'],axis=1)),validate=False)),
+                ('remove_features',FunctionTransformer(remove_features,validate=False)),
                 ('imputer',SimpleImputer(strategy='median')),
                 ('scaler',StandardScaler())
             ])
@@ -89,8 +92,8 @@ class DataTransformation:
             X_train_transformed = preprocessor_obj.fit_transform(X_train)
             X_test_transformed = preprocessor_obj.transform(X_test)
             
-            train_array = np.c_(X_train_transformed,np.array(y_train))
-            test_array = np.c_(X_test_transformed,np.array(y_test))
+            train_array = np.c_[X_train_transformed,np.array(y_train)]
+            test_array = np.c_[X_test_transformed,np.array(y_test)]
             
             df_train = pd.DataFrame(train_array)
             df_test = pd.DataFrame(test_array)
