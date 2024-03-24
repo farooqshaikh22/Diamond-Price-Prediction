@@ -24,7 +24,7 @@ TEST_DATA = 'test.csv'
 ## data transformation related variables
 DATA_TRANSFORMATION_ARTIFACT_KEY = 'data_transformation'
 DATA_PROCESSOR_DIR = 'processor'
-DATA_TRANSFORMED_PROCESSOR_OBJ = 'processor.pkl'
+PROCESSOR_OBJ = 'processor.pkl'
 FEATURE_ENGINEERING_OBJ = 'feature_engg.pkl'
 DATA_TRANSFORMATION_DIR = 'transformation'
 TRANSFORMED_TRAIN_DATA = 'train.csv'

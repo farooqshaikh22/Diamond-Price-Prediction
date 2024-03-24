@@ -17,10 +17,10 @@ TEST_FILE_PATH = os.path.join(ROOT_DIR,ARTIFACT_DIR_KEY,DATA_INGESTION_KEY,CURRE
 
 ## data transformation
 
-DATA_TRANSFORMED_PROCESSOR_OBJ_FILE_PATH = os.path.join(ROOT_DIR,ARTIFACT_DIR_KEY,
+PROCESSOR_OBJ_FILE_PATH = os.path.join(ROOT_DIR,ARTIFACT_DIR_KEY,
                                                         DATA_TRANSFORMATION_ARTIFACT_KEY,
                                                         DATA_PROCESSOR_DIR,
-                                                        DATA_TRANSFORMED_PROCESSOR_OBJ)
+                                                        PROCESSOR_OBJ)
 
 FEATURE_ENGINEERING_OBJ_FILE_PATH = os.path.join(ROOT_DIR,ARTIFACT_DIR_KEY,
                                                  DATA_TRANSFORMATION_ARTIFACT_KEY,
