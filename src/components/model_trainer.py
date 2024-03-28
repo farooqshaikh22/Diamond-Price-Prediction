@@ -10,7 +10,7 @@ from sklearn.tree import DecisionTreeRegressor
 from sklearn.neighbors import KNeighborsRegressor
 from xgboost import XGBRegressor
 from sklearn.ensemble import RandomForestRegressor, AdaBoostRegressor, GradientBoostingRegressor
-from sklearn.metrics import r2_score,mean_absolute_error,
+from sklearn.metrics import r2_score,mean_absolute_error
 from src.utils import save_object,evaluate_model
 
 class ModelTrainerConfig:
@@ -58,11 +58,9 @@ class Modeltrainer:
                 ]
             best_model = models[best_model_name]
             
-            print(f'Best Model Found , Model Name : {best_model_name} , 
-                  R2 Score : {best_model_score}')
+            print(f'Best Model Found , Model Name : {best_model_name},R2 Score : {best_model_score}')
             print('\n========================================================================\n')
-            logging.info(f'Best Model Found , Model Name : {best_model_name} , 
-                         R2 Score : {best_model_score}')
+            logging.info(f'Best Model Found , Model Name : {best_model_name},R2 Score : {best_model_score}')
             
             save_object(file_path=self.model_trainer_config.model_file_path,
                         obj=best_model)
