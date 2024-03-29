@@ -4,6 +4,8 @@ import pickle
 import os,sys
 from sklearn.metrics import r2_score
 
+
+## function for saving an object
 def save_object(file_path,obj):
     try:
         dir_path = os.path.dirname(file_path)
@@ -14,7 +16,8 @@ def save_object(file_path,obj):
             
     except Exception as e:
         raise CustomException(e,sys)
-    
+
+## function for evaluating the model    
 def evaluate_model(X_train,y_train,X_test,y_test,models):
     try:
         report = {}
@@ -38,9 +41,17 @@ def evaluate_model(X_train,y_train,X_test,y_test,models):
         return report
         
     except Exception as e:
-        logging.info('Excwption occured during model training')
+        logging.info('Exception occured during model training')
         raise CustomException(e,sys)
     
+    
+## function for loading an object        
+def load_model(filepath):
+    try:
+        with open(filepath,'rb') as f:
+            return pickle.load(f)
         
-        
+    except Exception as e:
+        logging.info('Exception occured while loading model')
+        raise CustomException(e,sys)        
     
