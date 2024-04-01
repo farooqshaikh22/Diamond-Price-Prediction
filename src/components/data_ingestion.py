@@ -31,10 +31,10 @@ class DataIngestion:
             train_data_set,test_data_set = train_test_split(df,test_size=0.2,random_state=42)
             
             os.makedirs(os.path.dirname(self.data_ingestion_config.train_data_path),exist_ok=True)
-            train_data_set.to_csv(self.data_ingestion_config.train_data_path,header=True)
+            train_data_set.to_csv(self.data_ingestion_config.train_data_path,index=False,header=True)
             
             os.makedirs(os.path.dirname(self.data_ingestion_config.test_data_path),exist_ok=True)
-            test_data_set.to_csv(self.data_ingestion_config.test_data_path,header=True)
+            test_data_set.to_csv(self.data_ingestion_config.test_data_path,index=False,header=True)
             
             return(
                 self.data_ingestion_config.train_data_path,

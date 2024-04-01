@@ -28,7 +28,7 @@ class PredictionPipeline:
             raise CustomException(e,sys)
         
 
-class CustomeData:
+class CustomData:
     def __init__(self,
                  carat:float,
                  cut:str,

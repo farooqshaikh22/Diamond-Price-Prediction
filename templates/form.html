@@ -44,152 +44,117 @@
 </style>
 <div>
   <form action="{{url_for('predict_datapoint')}}" method="POST">
-  <h1 style="background-color: skyblue; text-align: center; padding: 30px 0; font-size: 3em;">ZOMATO TIME PREDICTION</h1>
+  <h1 style="background-color: skyblue; text-align: center; padding: 30px 0; font-size: 3em;">DIAMOND PRICE PREDICTION</h1>
   <div class="page">
       <div class="container">
 
 
         
         <div class="section">
-          <div class="title">Delivery_person_Age</div>
+          <div class="title">Carat</div>
           <div class="description">
-              <input type="text" id="Delivery_person_Age" name="Delivery_person_Age" placeholder="Enter AGE">
+              <input type="text" id="carat" name="carat" placeholder="Enter Carat Value (float)">
           </div>
         </div>
+
+
+
+
+
+      <div class="section">
+        <div class="title">Cut</div>
+        <div class="description">
+          <select id="cut" name="cut">
+            <option value="Fair">Fair</option>
+            <option value="Good">Good</option>
+            <option value="Very Good">Very Good</option>
+            <option value="Premium">Premium</option>
+            <option value="Ideal">Ideal</option>
+          </select>
+        </div>
+      </div>
+
+
+
+
+      <div class="section">
+        <div class="title">Color</div>
+        <div class="description">
+          <select id="color" name="color">
+            <option value="D">D</option>
+            <option value="E">E</option>
+            <option value="F">F</option>
+            <option value="G">G</option>
+            <option value="H">H</option>
+            <option value="I">I</option>
+            <option value="J">J</option>
+          </select>
+        </div>
+      </div>
+
+
+
+      <div class="section">
+        <div class="title">Clarity</div>
+        <div class="description">
+          <select id="clarity" name="clarity">
+            <option value="I1">I1</option>
+            <option value="SI2">SI2</option>
+            <option value="SI1">SI1</option>
+            <option value="VS2">VS2</option>
+            <option value="VS1">VS1</option>
+            <option value="VVS2">VVS2</option>
+            <option value="VVS1">VVS1</option>
+            <option value="IF">IF</option>
+          </select>
+        </div>
+      </div>
 
 
 
         
 
       <div class="section">
-        <div class="title">Delivery_person_Ratings</div>
+        <div class="title">Depth</div>
         <div class="description">
-            <input type="text" id="Delivery_person_Ratings" name="Delivery_person_Ratings" placeholder="Enter  rating (float)">
-        </div>
-      </div>
-
-
-
-
-
-      <div class="section">
-        <div class="title">Weather_conditions</div>
-        <div class="description">
-          <select id="Weather_conditions" name="Weather_conditions">
-            <option value="Sunny">Sunny</option>
-            <option value="Cloudy">Cloudy</option>
-            <option value="Fog">Fog</option>
-            <option value="Windy">Windy</option>
-            <option value="Sandstorms">Sandstorms</option>
-            <option value="Stormy">Stormy</option>
-          </select>
-        </div>
-      </div>
-
-
-
-
-      <div class="section">
-        <div class="title">Road_traffic_density</div>
-        <div class="description">
-          <select id="Road_traffic_density" name="Road_traffic_density">
-            <option value="Low">Low</option>
-            <option value="Medium">Medium</option>
-            <option value="High">High</option>
-            <option value="Jam">Jam</option>
-          </select>
+            <input type="text" id="depth" name="depth" placeholder="Enter depth value (float)">
         </div>
       </div>
 
 
 
       <div class="section">
-        <div class="title">Vehicle_condition</div>
+        <div class="title">Table</div>
         <div class="description">
-          <select id="Vehicle_condition" name="Vehicle_condition">
-            <option value="0">0</option>
-            <option value="1">1</option>
-            <option value="2">2</option>
-            <option value="3">3</option>
-          </select>
+            <input type="text" id="table" name="table" placeholder="Enter table value (float)">
         </div>
       </div>
 
-
-
-      <div class="section">
-        <div class="title">multiple_deliveries</div>
-        <div class="description">
-          <select id="multiple_deliveries" name="multiple_deliveries">
-            <option value="0">0</option>
-            <option value="1">1</option>
-            <option value="2">2</option>
-            <option value="3">3</option>
-          </select>
-        </div>
-      </div>
-
-
-    
-
-      <div class="section">
-        <div class="title">distance</div>
-        <div class="description">
-            <input type="text" id="distance" name="distance" placeholder="Enter  distance (float)">
-        </div>
-      </div>
-
-
-
-
-      <div class="section">
-        <div class="title">Type_of_order</div>
-        <div class="description">
-          <select id="Type_of_order" name="Type_of_order">
-            <option value="Drinks">Drinks</option>
-            <option value="Buffet">Buffet</option>
-            <option value="Snack">Snack</option>
-            <option value="Meal">Meal</option>
-          </select>
-        </div>
-      </div>
+      
 
 
 
     
       <div class="section">
-        <div class="title">Type_of_vehicle</div>
+        <div class="title">x</div>
         <div class="description">
-          <select id="Type_of_vehicle" name="Type_of_vehicle">
-            <option value="scooter">scooter</option>
-            <option value="motorcycle">motorcycle</option>
-            <option value="electric_scooter">electric_scooter</option>
-            <option value="bicycle">bicycle</option>
-          </select>
+            <input type="text" id="x" name="x" placeholder="Enter x value (float)">
         </div>
       </div>
       
 
       <div class="section">
-        <div class="title">Festival</div>
+        <div class="title">y</div>
         <div class="description">
-          <select id="Festival" name="Festival">
-            <option value="Yes">Yes</option>
-            <option value="No">No</option>
-          
-          </select>
+            <input type="text" id="y" name="y" placeholder="Enter y value (float)">
         </div>
       </div>
       
 
       <div class="section">
-        <div class="title">City</div>
+        <div class="title">z</div>
         <div class="description">
-          <select id="City" name="City">
-            <option value="Metropolitian">Metropolitian</option>
-            <option value="Urban">Urban</option>
-            <option value="Semi-Urban">Semi-Urban</option>
-          </select>
+            <input type="text" id="z" name="z" placeholder="Enter z value (float)">
         </div>
       </div>
       
@@ -208,7 +173,7 @@
          
             </div>
             
-            <h1><h1>Delivery come in {{final_result}} minutes</h1></h1>
+            <h1><h1>Diamond Price is  {{final_result}} </h1></h1>
               
               
           </form>
