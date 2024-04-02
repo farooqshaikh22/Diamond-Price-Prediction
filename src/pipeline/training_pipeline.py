@@ -22,4 +22,4 @@ class Train:
         train_arr,test_arr = data_transformation.initiate_data_transformation(train_data_path,test_data_path)
         
         model_trainer = Modeltrainer()
-        print(model_trainer.initiate_model_training())
+        model_trainer.initiate_model_training(train_arr,test_arr)
