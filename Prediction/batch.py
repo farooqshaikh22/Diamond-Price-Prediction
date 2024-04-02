@@ -62,6 +62,8 @@ class batch_prediction:
             df_prediction.to_csv(csv_path,index=False)
             logging.info('Batch Prediction done')
             
+            
+            
                                   
         except Exception as e:
             raise CustomException(e,sys)
