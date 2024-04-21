@@ -18,8 +18,6 @@ list_of_files = [
     'schema.yaml',
     'app.py',
     'main.py',
-    'logs.py',
-    'exception.py',
     'setup.py'
 ]
 
