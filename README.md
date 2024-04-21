@@ -1,4 +1,6 @@
 # Diamond Price Prediction Web Application
+![Screenshot (6)](https://github.com/farooqshaikh22/Diamond-Price-Prediction/assets/127769353/6bb88ec2-14a6-450a-b462-45143d769e26)
+
 
 ## Overview
 
