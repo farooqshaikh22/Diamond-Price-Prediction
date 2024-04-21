@@ -70,7 +70,7 @@ Welcome to the Diamond Price Prediction web application! This project offers a c
 
 ## License
 
-This project is licensed under the [MIT License](#).
+This project is licensed under the [MIT License](LICENSE)
 
 
 
